@@ -20,7 +20,11 @@ func main(){
 
     router.POST("/login", controllers.Login)
     router.POST("/newuser", controllers.CreateUser)
-    router.GET("/users", controllers.GetUser)
+    router.GET("/users", controllers.GetUsers)
+    router.GET("/users/:id", controllers.GetUserByID)
+    router.GET("/users/feedback", controllers.GetUserFeedback)
+    router.PUT("/users/:id", controllers.UpdateUserByID)
+    router.DELETE("/users/:id", controllers.DeleteUserByID)
 
 	router.NoRoute(func(c*gin.Context){
 		c.JSON(404, gin.H{"message": "Page not found"})

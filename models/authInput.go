@@ -10,3 +10,9 @@ type CreateUserInput struct {
 	Language string `json:"language" binding:"required"`
 	RoleID   uint   `json:"roleID" binding:"required"`
 }
+
+type UpdateUserInput struct {
+    Username string `json:"username"`
+    Language string `json:"language"`
+    RoleID   uint   `json:"roleID"`
+}
