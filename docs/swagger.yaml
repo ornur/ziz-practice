@@ -1,0 +1,13 @@
+basePath: /api/v1
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a simple API for a small bot backend
+  title: Small Bot Backend API
+  version: "1.0"
+paths: {}
+produces:
+- application/json
+schemes:
+- http
+swagger: "2.0"
