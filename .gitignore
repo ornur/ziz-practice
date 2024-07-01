@@ -1,2 +1,3 @@
 smallBotBackend.exe
 .env
+.env.local

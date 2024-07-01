@@ -10,14 +10,14 @@ type Role struct {
 }
 
 type User struct {
-	ID        uint      `json:"id" gorm:"primaryKey"`
-	Username  string    `json:"username" gorm:"unique;not null"`
-	Language  string    `json:"language" gorm:"not null"`
-	Email	  string    `json:"email" gorm:"not null"`
-	CreatedAt time.Time `gorm:"default:current_timestamp"`
-	UpdatedAt time.Time `gorm:"default:current_timestamp"`
-	RoleID    uint      `json:"roleID" gorm:"not null"`
-	Role      Role      `json:"role" gorm:"foreignKey:RoleID"`
+	ID          uint      `json:"id" gorm:"primaryKey"`
+	Telegram_ID uint      `json:"telegram_id" gorm:"not null"`
+	Language    string    `json:"language" gorm:"not null"`
+	Email       string    `json:"email" gorm:"not null"`
+	CreatedAt   time.Time `gorm:"default:current_timestamp"`
+	UpdatedAt   time.Time `gorm:"default:current_timestamp"`
+	RoleID      uint      `json:"roleID" gorm:"not null"`
+	Role        Role      `json:"role" gorm:"foreignKey:RoleID"`
 }
 
 type UserFeedback struct {
