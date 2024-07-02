@@ -1,13 +1,13 @@
 package main
 
 import (
-	"smallBotBackend/controllers"
+    "smallBotBackend/controllers"
 	"smallBotBackend/initializers"
 	// "smallBotBackend/middlewares"
+
     ginSwagger "github.com/swaggo/gin-swagger"
     swaggerFiles "github.com/swaggo/files"
     docs "smallBotBackend/docs"
-    //_ "github.com/swaggo/gin-swagger/example/basic/docs"
 
     "github.com/gin-gonic/gin"
 )
@@ -29,6 +29,7 @@ func init(){
 
 func main(){
     router := gin.Default()
+
     docs.SwaggerInfo.BasePath = "/api/v1"
     router.ForwardedByClientIP = true
     router.SetTrustedProxies([]string {"127.0.0.1", "192.168.8.180", "192.168.8.228"})
